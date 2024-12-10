@@ -1,5 +1,7 @@
 This is a demo project written in NextJS. It uses prisma for ORM (which means connects to database)
 
+This has been modified for Group 9 for class CSCI 4650/8656. Some information below may be out of date.
+
 # Run on your local machine
 
 - Step 1, clone this project to your local machine and within the project root folder 
