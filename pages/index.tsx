@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<any[]>([]);
   const [newItem, setNewItem] = useState('');
   const [quantity, setQuantity] = useState(1);
 
