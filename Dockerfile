@@ -1,6 +1,6 @@
 ARG NODE_VERSION=18.0.0
 
-FROM node:${NODE_VERSION}-alpine as base
+FROM --platform=linux/amd64 node:${NODE_VERSION}-alpine as base
 
 WORKDIR /usr/src/app
 
@@ -13,9 +13,7 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 
 COPY . .
 
-RUN npx prisma migrate reset --force &&\
-    npx prisma migrate dev --name init &&\
-    npm run build
+RUN npm run build
 
 
 FROM base as final

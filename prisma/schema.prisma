@@ -2,12 +2,13 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 datasource db {
-  provider = "sqlite" // Adjust if you plan to use a different database
-  url      = "file:./dev.db"
+  provider = "mysql"
+  url      = "mysql://admin:BigBrownBeaver@mysql.czq4a2gm8xy5.us-west-1.rds.amazonaws.com:3306/fgp"
 }
 
 generator client {
   provider = "prisma-client-js"
+  binaryTargets   = ["linux-musl"]
 }
 
 model ShoppingListItem {
